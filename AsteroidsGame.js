@@ -9,6 +9,8 @@ const BULLET_SPEED = 10;
 const BULLET_LIFE = 60;
 const FIRE_RATE = 10;
 const ASTEROID_SIZES = { large: 40, medium: 22, small: 12 };
+
+// Musica del juego
 const musicGame = new Audio("./public/PixelHeartbeat.mp3");
 musicGame.volume = 0.2;
 
