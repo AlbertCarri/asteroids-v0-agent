@@ -9,7 +9,7 @@ const BULLET_SPEED = 10;
 const BULLET_LIFE = 60;
 const FIRE_RATE = 10;
 const ASTEROID_SIZES = { large: 40, medium: 22, small: 12 };
-const musicGame = new Audio("/public/PixelHeartbeat.mp3");
+const musicGame = new Audio("./public/PixelHeartbeat.mp3");
 musicGame.volume = 0.2;
 
 const state = {
@@ -63,15 +63,15 @@ function endMusic() {
 }
 
 function playShootSound() {
-  playSound("/public/laser.wav", 0.4);
+  playSound("./public/laser.wav", 0.4);
 }
 
 function playExplosionSound() {
-  playSound("/public/asteroidexplotion.wav", 0.5);
+  playSound("./public/asteroidexplotion.wav", 0.5);
 }
 
 function starShipExplosion() {
-  playSound("/public/shipexplotion.wav", 0.5);
+  playSound("./public/shipexplotion.wav", 0.5);
 }
 
 function wrapPosition(pos) {
@@ -301,7 +301,7 @@ function update() {
     state.ship.vel.x += Math.cos(state.ship.angle) * THRUST_POWER;
     state.ship.vel.y += Math.sin(state.ship.angle) * THRUST_POWER;
     const speed = Math.hypot(state.ship.vel.x, state.ship.vel.y);
-    playSound("/public/shipPropulsion.wav", 0.2);
+    playSound("./public/shipPropulsion.wav", 0.2);
     if (speed > MAX_SPEED) {
       state.ship.vel.x = (state.ship.vel.x / speed) * MAX_SPEED;
       state.ship.vel.y = (state.ship.vel.y / speed) * MAX_SPEED;
