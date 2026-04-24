@@ -1,0 +1,75 @@
+:root {
+  color-scheme: dark;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(circle at top, #141a2b 0%, #000 70%);
+  color: #fff;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.game-shell {
+  position: relative;
+  width: fit-content;
+}
+
+canvas {
+  display: block;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: #000;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.45);
+}
+
+.controls {
+  margin-top: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay p {
+  margin: 0;
+}
+
+.message-title {
+  font-size: clamp(2rem, 4vw, 4rem);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.message-subtitle {
+  margin-top: 12px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.message-small {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+}
